@@ -24,12 +24,16 @@ h1 {
     }
     }
     @else if $break == medium {
-    @media (max-width: $break-medium) { @content; }
+    @media (max-width: $break-medium) { 
+        width: 80%;
+        max-width: 800px;
+    }
     }
     @else if $break == small {
-    @media (max-width: $break-small) { @content; }
-    } @else {
-    @media ($break) { @content; }
+    @media (max-width: $break-small) {
+        width: 90%;
+        max-width: 700px;
+    }
     }
     }
 
@@ -37,8 +41,10 @@ h1 {
     background-color: $form-background-color;
     input, textarea {
         background-color: $input-color;
-        flex: 2;
     }
+    @include breakpoint (large);
+    @include breakpoint (medium);
+    @include breakpoint (small);
 }
 
 @mixin flex-container($axis, $wrap: nowrap) {

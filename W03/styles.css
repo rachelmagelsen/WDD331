@@ -12,7 +12,24 @@ h1 {
 }
 #contactform input, #contactform textarea {
   background-color: rgb(236, 218, 198);
-  flex: 2;
+}
+@media (max-width: 60em) {
+  #contactform {
+    width: 70%;
+    max-width: 900px;
+  }
+}
+@media (max-width: 31em) {
+  #contactform {
+    width: 80%;
+    max-width: 800px;
+  }
+}
+@media (max-width: 20em) {
+  #contactform {
+    width: 90%;
+    max-width: 700px;
+  }
 }
 
 fieldset > div {
