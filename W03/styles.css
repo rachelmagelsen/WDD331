@@ -1,0 +1,33 @@
+body {
+  background-color: darkred;
+}
+
+h1 {
+  color: white;
+  margin-left: 3rem;
+}
+
+#contactform {
+  background-color: rgb(235, 184, 106);
+}
+#contactform input, #contactform textarea {
+  background-color: rgb(236, 218, 198);
+  flex: 2;
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
