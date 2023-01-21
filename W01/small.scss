@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+$dark-gray: #333;
+$light-gray: #666;
+$active: #deb887;
+$hover: #00ddff;
+$breakpoint: 45rem;
+$border: 1px solid #d0d0d0;
+
+body {
+    margin: 0px 70px;
+}
+@mixin hover {
+    &:active {
+        color: $active; 
+    }
+    &:hover {
+        color: $hover;
+    }
+}
+
+/* headers, titles */
+h1, h2, .post-date, nav {
+    font-family: "Lora", serif;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    line-height: 40px;
+}
+nav, .post-date {
+    text-transform: uppercase;
+}
+h2, .post-date, nav, p {
+    a {
+        text-decoration: none;
+        color: $light-gray;
+        @include hover
+    }
+}
+h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    a {
+        color: $dark-gray;
+        text-decoration: none;
+        &:hover {
+            color: $dark-gray;
+        }
+    }
+}
+nav {
+    border-top: $border;
+    border-bottom: $border;
+}
+
+
+/* body stuff, layout */
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    color: $dark-gray
+}
+.post-date {
+    font-size: 1.3rem;
+    text-align: right;
+    padding-top: 45px;
+    padding-bottom: 15px;
+    border-bottom: $border;
+}
+figure {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+img {
+    max-width: 200px;
+    height: auto;
+}
+article h2 {
+    padding-top: 30px;
+}
+
+@media only screen and (min-width: 45rem) {
+    body {
+        margin: 0px 100px;
+    }
+    ul {
+        text-align: right;
+        overflow: hidden;
+    }
+    li {
+        display: inline;
+        white-space: nowrap;
+        padding-left: 30px;
+        font-size: 1.3rem;
+    }
+    nav {
+        margin-bottom: 25px;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        border-bottom: $border;
+    }
+    .post-date {
+        grid-column: 1/2;
+        border-bottom: none;
+        border-right: $border;
+        padding-right: 30px;
+    }
+    .post-content {
+        grid-column: 2/3;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    article h2, article p {
+        padding-left: 20px;
+    }
+    article p {
+        padding-bottom: 15px;
+    }
+}
