@@ -1,0 +1,10 @@
+.row-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+section > div {
+    border: 1px solid black;
+    margin: 15px;
+}
