@@ -1,3 +1,5 @@
+
+
 h2 {
     font-family: Courier New;
     font-weight: 200;
@@ -25,9 +27,9 @@ section {
 }
 
 .col-grid > * {
+    display: flex;
     border: 1px solid black;
     border-radius: 5px;
-    display: flex;
     flex-direction: column;
 }
 .col-grid > * > img {
@@ -36,7 +38,9 @@ section {
 .col-grid {
     display: flex;
     flex-flow: wrap;
-    align-self: stretch;
     vertical-align: baseline;
     gap: 10px;
+    flex-direction: column;
+    max-height: 1300px;
+    width: 100%;
 }
